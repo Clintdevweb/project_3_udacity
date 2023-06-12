@@ -1,0 +1,37 @@
+
+<div *ngIf="listCart && listCart.length; else emptyCart" class="cart-container">
+  <div class="list-item-container">
+    <div *ngFor="let item of listCart">
+        <app-cart-item (onChangeItem)="handleChangeItem($event)" [item]="item" (onRemoveItem)="handleRemoveItem($event)"></app-cart-item>
+    </div>
+    <p class="text-center">Total Price: ${{totalPrice}}</p>
+  </div>
+  <div class="form-cart-container">
+    <form class="form-cart" #formInfo="ngForm" (submit)="handleSubmit(formInfo.value)">
+      <div class="form-item">
+        <label for="fullname">Full name</label>
+        <input placeholder="Minimun is 3 characters" [minlength]="3" required class="form-control" type="text" ngModel name="fullName" id="fullname">
+      </div>
+      <div class="form-item">
+        <label for="adress">Address</label>
+        <input required placeholder="Minimun is 6 characters"
+        minlength="6" id="adress" class="form-control" type="text" ngModel name="address">
+      </div>
+      <div class="form-item">
+        <label for="creditCard">Credit card</label>
+        <input required placeholder="Minimun is 16 characters" minlength="16" id="creditCard" class="form-control" type="text" ngModel name="creditCard">
+      </div>
+      <p>We will never share you payment details with anyone else</p>
+      <div class="btn-submit">
+        <p-button [disabled]="formInfo.invalid || totalPrice === 0" type="submit">Submit</p-button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+<ng-template #emptyCart>
+  <div>
+    <h2 class="empty-cart">No item in your cart</h2>
+  </div>
+</ng-template>

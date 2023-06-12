@@ -1,0 +1,39 @@
+.app-container {
+  .app-header {
+    h3 {
+      text-align: center;
+      background-color: #205aeb;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      padding-left: 40px;
+    }
+  }
+
+  .app-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #205aeb;
+    width: auto;
+  }
+
+  .router-button {
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+  }
+
+
+  .boder-right {
+    border-right: 1px solid #4f4b4b;
+  }
+
+}

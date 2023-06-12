@@ -1,0 +1,21 @@
+<div class="product-item-container">
+  <div class="card-container">
+    <div class="img-item-detail">
+      <img  alt="image" src="{{item.urlImage}}">
+    </div>
+    <div>
+      <div>
+        <h2 class="text-center">{{item.name}}</h2>
+        <p class="text-center">{{item.discription}}</p>
+        <p class="text-center">{{item.price}}</p>
+        <p-dropdown [(ngModel)]="quantity" [options]="quantities"></p-dropdown>
+        <div class="add-cart-btn">
+          <p-button (click)="addToCart(item, quantity)">Add to cart</p-button>
+        </div>
+        <div class="router-product-detail">
+          <a [routerLink]="['/']"><i class="pi pi-arrow-left"></i> Back to product list</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

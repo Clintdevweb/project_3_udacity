@@ -1,0 +1,18 @@
+<div class="cart-container">
+  <div class="img-item-detail">
+    <img  alt="image" src="{{item.urlImage}}">
+  </div>
+  <div>
+    <div>
+      <h2 class="text-center">{{item.name}}</h2>
+      <p class="text-center">{{item.price}}</p>
+      <div class="text-center">
+          Amount: <input required type="number" min="1" [(ngModel)]="item.quantity" class="amount-input" (ngModelChange)="onChangeQuantity(item)">
+      </div>
+      <div>
+        <button class="remove-item-cart" type="button" (click)="removeItemCart(item)">Remove</button>
+      </div>
+    </div>
+  </div>
+</div>
+

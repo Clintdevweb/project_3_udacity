@@ -1,27 +1,48 @@
-# ShoppingStore
+MyStore Project 
+MyStore is Angular application that allows users to view a list of available products to purchase, add them to a shopping cart, and ultimately complete the checkout process.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+Started
+To use these files, simply merge the folders into the root directory of your scaffolded Angular application.
 
-## Development server
+Project Instructions
+Project introduction: MyStore
+You've completed the course! You know how to create a single-page application to offer a rich, dynamic experience on the web.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Before you begin
+Throughout the course, you've learned a lot about Angular components, services, modules, services, routing, and data flow. Before you begin scaffolding the application, ask yourself:
 
-## Code scaffolding
+How do I fetch and use data from an external API (or JSON data file)?
+What does a logical hierarchy of components look like? For example, which components should be parent components, and which components should be their children components?
+How do I collect input from the user, using controlled form elements as the "source of truth" of such data?
+What are events in Angular, and how do I listen and respond to them?
+What is a model, and how do I create one in TypeScript?
+How do I pass data between parent and child components? Hint: Which decorators should be used?
+How do I pass data between sibling or otherwise "unrelated" components?
+How is routing set up in the templates? Likewise, how do I configure the app routing module to support this?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+SCSS and CSS. The provided stylesheets are not required, but you may use the included SCSS and CSS classes to help you style the application. Feel free to use your creativity and build a UI as you see fit!
 
-## Build
+data.json. You may fetch the list of products for your store from the API created in the previous course of this Nanodegree program. In lieu of using that data, you may also choose to have your application read the provided data.json file to populate your store.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+If you choose to use the starter code, all files can be downloaded here. To use them, just merge the folders into the root directory of your scaffolded application.
 
-## Running unit tests
+Project features
+Your application reflects the same user experience as that of a real-world e-commerce website, including a(n):
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Product list page, which displays the available products for the user to choose and add to their cart (in various quantities)
+Product details page, which displays more information about any particular product
+Shopping cart, which includes the products that the user has added to their cart
+Checkout form, which collects information about the user (e.g., name, address, payment details, etc.)
+Order confirmation page, which shows the outcome after the user completes the checkout process (i.e., submits the checkout form)
+Development strategy
+Feel free to use this overview and the rubric specifications to create this project. You are always welcome to design and implement your own workflow, but if you are stuck or could use some inspiration, we've included the following walkthrough the help you get up and running.
 
-## Running end-to-end tests
+Scaffold your project using the Angular CLI, and install any dependencies.
+Generate the product list component. Having the product list as the "main" page is a great start for your users.
+Begin building the component logic and template What is the function of the product list? What logic is included in the TypeScript component, and how does its HTML template function? Does this component collect any user input? If so, how does information entered by the user relate to properties in the TypeScript component?
+Consider the hierarchy of components. Which other components do you anticipate you'll need to build in this application? Which component(s) should render other components? Which components should represent a parent-child relationship? Feel free to draw out this hierarchy as a chart to help you visualize the relationships between components.
+Create the TypeScript model for products in the app. Any available product should be of this type, rather than an ordinary object.
+Generate the service(s). Which service(s) make the most sense? For any particular service, what is its function? Hint: You may want to create a service to handle any asynchronous data.
+Fetch data from the API (or included data.json file) and render products in your product list.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+You should run: npm i and then npm run start to get app. Thank you
