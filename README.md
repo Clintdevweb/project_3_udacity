@@ -9,8 +9,7 @@ Project introduction: MyStore
 You've completed the course! You know how to create a single-page application to offer a rich, dynamic experience on the web.
 
 Before you begin
-Throughout the course, you've learned a lot about Angular components, services, modules, services, routing, and data flow. Before you begin scaffolding the application, ask yourself:
-
+Before you begin scaffolding the application, ask yourself:
 How do I fetch and use data from an external API (or JSON data file)?
 What does a logical hierarchy of components look like? For example, which components should be parent components, and which components should be their children components?
 How do I collect input from the user, using controlled form elements as the "source of truth" of such data?
@@ -23,8 +22,6 @@ How is routing set up in the templates? Likewise, how do I configure the app rou
 SCSS and CSS. The provided stylesheets are not required, but you may use the included SCSS and CSS classes to help you style the application. Feel free to use your creativity and build a UI as you see fit!
 
 data.json. You may fetch the list of products for your store from the API created in the previous course of this Nanodegree program. In lieu of using that data, you may also choose to have your application read the provided data.json file to populate your store.
-
-If you choose to use the starter code, all files can be downloaded here. To use them, just merge the folders into the root directory of your scaffolded application.
 
 Project features
 Your application reflects the same user experience as that of a real-world e-commerce website, including a(n):
