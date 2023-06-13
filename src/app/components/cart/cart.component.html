@@ -4,7 +4,7 @@
     <div *ngFor="let item of listCart">
         <app-cart-item (onChangeItem)="handleChangeItem($event)" [item]="item" (onRemoveItem)="handleRemoveItem($event)"></app-cart-item>
     </div>
-    <p class="text-center">Total Price: ${{totalPrice}}</p>
+    <p class="text-center">Total Cost: ${{totalPrice}}</p>
   </div>
   <div class="form-cart-container">
     <form class="form-cart" #formInfo="ngForm" (submit)="handleSubmit(formInfo.value)">
@@ -19,7 +19,7 @@
       </div>
       <div class="form-item">
         <label for="creditCard">Credit card</label>
-        <input required placeholder="Minimun is 16 characters" minlength="16" id="creditCard" class="form-control" type="text" ngModel name="creditCard">
+        <input required placeholder="Minimun is 16 characters" minlength="16" id="creditCard" class="form-control" type="number" ngModel name="creditCard">
       </div>
       <p>We will never share you payment details with anyone else</p>
       <div class="btn-submit">

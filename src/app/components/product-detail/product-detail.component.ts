@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { SelectItem } from 'primeng/api';
+import { SelectItem, MessageService } from 'primeng/api';
 import { Subscription } from 'rxjs';
 import { Item } from 'src/app/models/item/item.models';
 import { DataService } from 'src/app/services/data-service.service';
@@ -31,7 +31,8 @@ export class ProductDetailComponent implements OnInit, AfterViewInit, OnDestroy 
   subcriptions: Subscription[] = []
 
   constructor(private routeActive: ActivatedRoute,
-    private dataService: DataService) { }
+    private dataService: DataService,
+    private messageService: MessageService) { }
 
   ngOnInit() {
     this.id = this.routeActive.snapshot.paramMap.get('id');
@@ -58,6 +59,7 @@ export class ProductDetailComponent implements OnInit, AfterViewInit, OnDestroy 
     let itemAddtoCart = {...item, quantity: quantity}
     this.dataService.checkItemExist(this.cart, itemAddtoCart)
     this.dataService.cartSubject$.next(this.cart)
+    this.messageService.add({severity:'success', summary: 'Success', detail: 'Add product to cart success'})
   }
 
   ngAfterViewInit(): void {
