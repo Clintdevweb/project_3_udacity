@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
 import { Item } from 'src/app/models/item/item.models';
 import { DataService } from 'src/app/services/data-service.service';
 
@@ -10,10 +11,16 @@ import { DataService } from 'src/app/services/data-service.service';
 })
 export class CartComponent implements OnInit {
 
-  constructor(private dataService: DataService, private router: Router) { }
+  constructor(private dataService: DataService, private router: Router, private messageService: MessageService) { }
   listCart: Item[] = []
+  totalPrice:number = 0;
 
-  totalPrice: number = 0;
+  infoOrder = {
+    fullName:  '',
+    address:   '',
+    creditCard: null
+  }
+
   ngOnInit() {
     this.getCart()
   }
@@ -44,6 +51,7 @@ export class CartComponent implements OnInit {
     })
 
     this.dataService.cartSubject$.next(listCartNew)
+    this.messageService.add({severity:'success', summary: 'Success', detail: 'Remove item success '})
   }
 
   handleSubmit(formValue: any) {

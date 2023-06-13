@@ -37,7 +37,7 @@ export class CardComponent implements OnInit {
     let itemAddtoCart = {...item, quantity: quantity}
     this.dataService.checkItemExist(this.listCart, itemAddtoCart)
     this.dataService.cartSubject$.next(this.listCart)
-    this.messageService.add({severity:'success', summary: 'Success', detail: 'Add '})
+    this.messageService.add({severity:'success', summary: 'Success', detail: 'Add item success'})
   }
 
   showProductDetail(id: string) {

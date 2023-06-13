@@ -7,6 +7,8 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { CartItemModule } from './cart-item/cart-item.module';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [CartComponent],
@@ -17,9 +19,10 @@ import { CartItemModule } from './cart-item/cart-item.module';
     ButtonModule,
     InputTextModule,
     InputNumberModule,
-    CartItemModule
+    CartItemModule,
+    ToastModule
   ],
-  providers: [],
+  providers: [MessageService],
   exports: [CartComponent],
 })
 export class CartStoreModule {}
